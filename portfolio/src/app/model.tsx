@@ -1,5 +1,7 @@
 export interface CardDetails {
-  title: string;
-  description: string;
-  link: string;
+  projectName: string;
+  projectDescription: string;
+  githubLink: string;
+  projectLink: string;
+  techStack: string[];
 }
