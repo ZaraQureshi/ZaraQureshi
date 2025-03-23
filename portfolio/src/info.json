@@ -1,0 +1,29 @@
+{
+  "zara": {
+    "projects": [
+      {
+        "projectName": "BillGrill",
+        "projectDescription": "BillGrill is a web application that allows users to create, edit, and delete bills. The application also allows users to view their bill history and see a summary of their bills.",
+        "githubLink": "https://github.com/ZaraQureshi/DynamicInternetBillGenerator",
+        "projectLink": "https://billgrill.persist.site/",
+        "techStack": ["React", "Node.js", "Express", "MongoDB"]
+
+    },
+      {
+        "projectName": "PeakParser",
+        "projectDescription": "BillGrill is a web application that allows users to convert data from one format to another.",
+        "githubLink": "https://github.com/ZaraQureshi/PeakParser",
+        "projectLink": "https://peakparser.persist.site/",
+        "techStack": ["React", "Node.js", "Express", "MongoDB"]
+      },
+      {
+        "projectName": "PTHealthCare",
+        "projectDescription": "PTHealthCare is a web application that allows users make appointment and view appointments.",
+        "githubLink": "https://github.com/ZaraQureshi/PTHealthCare",
+        "projectLink": "https://pthealthcare.persist.site/",
+        "techStack": ["React", "Node.js", "Express", "MongoDB"]
+
+      }
+    ]
+  }
+}
