@@ -5,3 +5,13 @@ export interface CardDetails {
   projectLink: string;
   techStack: string[];
 }
+
+export interface Link {
+  name: string;
+  link: string;
+}
+
+export interface About {
+  description: string;
+  links:Link[];
+}
