@@ -7,8 +7,7 @@
         "githubLink": "https://github.com/ZaraQureshi/DynamicInternetBillGenerator",
         "projectLink": "https://billgrill.persist.site/",
         "techStack": ["React", "Node.js", "Express", "MongoDB"]
-
-    },
+      },
       {
         "projectName": "PeakParser",
         "projectDescription": "BillGrill is a web application that allows users to convert data from one format to another.",
@@ -22,8 +21,24 @@
         "githubLink": "https://github.com/ZaraQureshi/PTHealthCare",
         "projectLink": "https://pthealthcare.persist.site/",
         "techStack": ["React", "Node.js", "Express", "MongoDB"]
-
       }
-    ]
+    ],
+    "about": {
+      "description": "Software engineer who builds solutions",
+      "links": [
+        {
+          "name": "LinkedIn",
+          "link": "https://www.linkedin.com/in/ZaraQureshi/"
+        },
+        {
+          "name": "GitHub",
+          "link": "https://github.com/ZaraQureshi"
+        },
+        {
+          "name": "email",
+          "link": "mailto:qzara819@gmail.com"
+        }
+      ]
+    }
   }
 }
