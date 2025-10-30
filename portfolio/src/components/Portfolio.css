@@ -1,0 +1,255 @@
+/* src/components/Portfolio.css */
+
+/* --- 1. CSS Variable Definitions (Default: Light Mode) --- */
+:root {
+    /* Primary Colors */
+    --color-primary: #4f46e5;       /* Indigo */
+    --color-primary-dark: #3730a3;  /* Darker Indigo */
+    
+    /* Backgrounds & Surfaces */
+    --color-background: #ffffff;    /* White */
+    --color-surface: #f8f9fa;       /* Very Light Gray */
+    --color-card-bg: #ffffff;       /* Card White */
+    --color-border: #e0e0e0;        /* Light Border */
+    
+    /* Text */
+    --color-text-header: #1a202c;   /* Very Dark Text */
+    --color-text-body: #4a5568;     /* Gray Text */
+    --color-text-secondary: #718096;/* Secondary Gray */
+}
+
+/* --- 2. Dark Mode Overrides --- */
+.dark-mode {
+    --color-primary: #818cf8;       /* Lighter Indigo for visibility */
+    --color-primary-dark: #6366f1;
+    
+    --color-background: #1a1a1a;    /* Dark Gray Background */
+    --color-surface: #242424;       /* Slightly Lighter Dark Gray */
+    --color-card-bg: #2d2d2d;       /* Dark Card Background */
+    --color-border: #444444;        /* Darker Border */
+    
+    --color-text-header: #f0f0f0;   /* Light Text */
+    --color-text-body: #cccccc;
+    --color-text-secondary: #aaaaaa;
+}
+
+/* --- 3. Applying Variables to Elements --- */
+
+/* Global Layout */
+.portfolio-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-background); /* 👈 Use variable */
+    color: var(--color-text-body); /* 👈 Use variable */
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header */
+.header-section {
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 40px;
+}
+
+.header-name {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-text-header);
+}
+
+.header-title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--color-primary);
+    margin-top: 5px;
+}
+
+.header-about {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: var(--color-text-body);
+    max-width: 700px;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--color-text-header);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 5px;
+}
+.section-card {
+    padding: 30px; /* Add internal padding */
+    margin-bottom: 40px; /* Space between cards */
+    background-color: var(--color-card-bg); /* Use card background variable */
+    border: 1px solid var(--color-border);
+    border-radius: 8px; /* Rounded corners for the card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Soft shadow */
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.section-card:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-primary);
+}
+
+/* Contact Links */
+.contact-section {
+    margin-bottom: 30px;
+}
+
+.contact-links-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.social-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+/* Skills */
+.skills-section {
+    margin-bottom: 30px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    padding: 6px 12px;
+    background-color: var(--color-surface);
+    color: var(--color-text-body);
+    border: 1px solid var(--color-border);
+    font-size: 0.9rem;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+/* Experience & Projects (Cards) */
+
+.experience-list,
+.projects-grid {
+    gap: 20px;
+}
+
+.job-card,
+.project-card {
+    padding: 15px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background-color: var(--color-card-bg); /* 👈 Use variable */
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.job-card:hover,
+.project-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-primary);
+}
+
+.job-title,
+.project-name {
+    color: var(--color-text-header);
+}
+
+.job-years,
+.project-tech {
+    color: var(--color-text-secondary);
+}
+
+.job-company {
+    color: var(--color-primary);
+}
+
+.job-description,
+.project-description {
+    color: var(--color-text-body);
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+}
+
+.project-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.project-link:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+/* Grid Layout for Projects (unchanged) */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Footer (unchanged) */
+.footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+}
+
+/* Mode Toggle Button Style */
+.mode-toggle-button {
+    background-color: var(--color-primary);
+    color: var(--color-background); /* White or light text */
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    position: fixed; /* Keep it on screen */
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.mode-toggle-button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* --- Experience & Projects (Flex/Grid settings from previous answer) --- */
+.experience-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}

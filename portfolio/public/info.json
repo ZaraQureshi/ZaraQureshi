@@ -1,5 +1,9 @@
 {
   "zara": {
+    "name":"Zara Qureshi",
+    "title":"Software Engineer",
+    "skills":["Javascript","ReactJs, NodeJs, SQL"],
+    "experience":[{"companyName":"Xoriant","description":"abc","title":"Software Engineer","years":"3"}],
     "projects": [
       {
         "projectName": "BillGrill",
@@ -23,9 +27,8 @@
         "techStack": ["React", "Node.js", "Express", "MongoDB"]
       }
     ],
-    "about": {
-      "description": "Software engineer who builds solutions",
-      "links": [
+    "about": "Software engineer who builds solutions",
+      "contact": [
         {
           "name": "LinkedIn",
           "link": "https://www.linkedin.com/in/ZaraQureshi/"
@@ -39,6 +42,6 @@
           "link": "mailto:qzara819@gmail.com"
         }
       ]
-    }
+    
   }
 }
