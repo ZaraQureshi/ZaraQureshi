@@ -30,14 +30,14 @@ const Portfolio = () => {
     };
 
     // Helper component for social links (unchanged)
-    const SocialLink = ({ href, text }:{href:any;text:any;}) => (
-        <a 
-            href={href} 
-            target="_blank" 
-            rel="noopener noreferrer" 
+    const SocialLink = ({ href, text }: { href: any; text: any; }) => (
+        <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
             className="social-link"
         >
-            <span className="social-link-text">{text}</span> 
+            <span className="social-link-text">{text}</span>
         </a>
     );
 
@@ -49,7 +49,7 @@ const Portfolio = () => {
             </button>
 
             <div className="portfolio-container">
-                
+
                 {/* Header / Introduction */}
                 <header className="header-section">
                     <h1 className="header-name">{name}</h1>
@@ -57,7 +57,7 @@ const Portfolio = () => {
                     <p className="header-about">{about}</p>
                 </header>
 
-               {/* Social Links / Connect (Now a Card) */}
+                {/* Social Links / Connect (Now a Card) */}
                 <section className="section-card"> {/* 👈 New Card Class */}
                     <h3 className="section-title">Connect</h3>
                     <div className="contact-links-list">
@@ -86,11 +86,13 @@ const Portfolio = () => {
                         {experience.map((job, index) => (
                             <div key={index} className="job-card">
                                 <div className="job-header">
+                                    <p className="job-company">{job.companyName}</p>
                                     <h4 className="job-title">{job.title}</h4>
                                     <span className="job-years">{job.years}</span>
                                 </div>
-                                <p className="job-company">{job.companyName}</p>
-                                <p className="job-description">{job.description}</p>
+                                <div>
+                                    {job.description.map((desc) => <p className="job-description">{desc}</p>)}
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -103,7 +105,7 @@ const Portfolio = () => {
                         {projects.map((project, index) => (
                             <div key={index} className="project-card">
                                 <h4 className="project-name">{project.projectName}</h4>
-                                <p className="project-tech">{Array.isArray(project.techStack) ? project.techStack.join(' • ') : project.techStack}</p> 
+                                <p className="project-tech">{Array.isArray(project.techStack) ? project.techStack.join(' • ') : project.techStack}</p>
                                 <p className="project-description">{project.projectDescription}</p>
                                 <div className="project-links">
                                     <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-link">
