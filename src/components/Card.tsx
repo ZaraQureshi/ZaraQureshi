@@ -94,7 +94,7 @@ function Card() {
               >
                 <p className="text-lg font-semibold text-white">{proj.projectName}</p>
                 <p className="text-sm text-gray-300 mt-2">{proj.projectDescription}</p>
-                <p className="text-xs text-gray-400 mt-2">{proj.techStack}</p>
+                 <p className="text-xs text-gray-400 my-2">Tech: {proj.techStack.join(", ")}</p>
 
                 <div className="mt-auto px-4 py-2 rounded-lg text-white font-medium bg-pink-800/40 hover:bg-pink-900/30 flex items-center justify-between transition cursor-pointer">
                   Know More <ArrowUpRight />
