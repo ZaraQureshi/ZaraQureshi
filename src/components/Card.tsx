@@ -42,13 +42,8 @@ function Card() {
     <div className=" flex items-center justify-center bg-gray-950 ">
 
       {/* <div className="min-h-screen bg-0 flex items-center justify-center p-10"> */}
-      <div className="min-h-screen w-screen 
-        grid grid-cols-1 
-        md:grid-cols-2 
-        lg:grid-cols-4 
-        grid-rows-auto
-        gap-4 p-4 sm:p-6 grid-rows-[0.5fr_2fr_1fr_1fr_0.7fr] gap-3 p-6 rounded-2xl shadow-lg">
-        <div className="row-span-3 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col items-center text-center order-1 lg:row-span-3">
+      <div className="min-h-screen w-screen grid grid-cols-4 grid-rows-[0.5fr_2fr_1fr_1fr_0.7fr] gap-3 p-6 rounded-2xl shadow-lg">
+        <div className="row-span-3 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col items-center text-center ">
           <span className="aspect-square rounded-full overflow-hidden border-4 border-gray-700 shadow-md
           w-24 sm:w-28 md:w-32 lg:w-36 xl:w-40 mb-4">
             <img className="w-full h-full object-cover" src="vite.svg" />
@@ -70,13 +65,12 @@ function Card() {
           <p className="text-gray-300 text-sm">a react and front end developer who likes to build projects that solves real time problems using react and nodejs and also like to explore different database technologies. have worked with different aspects ofreact like Redux, Redux Toolkit, React Hooks, React Router</p>
         </div> */}
 
-        <div className="row-span-3  min-h-auto order-3
-  lg:row-span-3">
+        <div className="row-span-3  min-h-auto">
           <h2 className="text-white text-2xl font-bold  pt-4">Experiance</h2>
           <div className="text-left flex flex-col rounded-xl shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 w-full p-4 sm:p-6">
-            {zara.zara.experience.map((exp, index) => {
+            {zara.zara.experience.map((exp,index) => {
               return (
-                < div key={index} className="">
+                < div key={index}className="">
                   <h2 className="text-left font-bold">{exp.companyName}</h2>
                   <h2 className="pb-2 text-left">{exp.title} | {exp.years}</h2>
                   {exp.description.map((desc) => (
@@ -90,11 +84,11 @@ function Card() {
 
                       {/* <!-- Content --> */}
 
-                      <div className="max-h-20 overflow-hidden">
-                        <p className="text-gray-300 text-sm line-clamp-3">
-                          {desc}
-                        </p>
-                      </div>
+                       <div className="max-h-20 overflow-hidden">
+      <p className="text-gray-300 text-sm line-clamp-3">
+        {desc}
+      </p>
+    </div>
 
                     </div>)
                   )}</div>
@@ -183,8 +177,7 @@ function Card() {
 
 
         </div>
-        <div className="row-span-2 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col items-center text-center order-5
-  lg:row-span-2 ">
+        <div className="row-span-2 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col items-center text-center ">
 
           <h2 className="text-white text-2xl font-bold mb-2">Skills</h2>
 
