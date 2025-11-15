@@ -42,8 +42,13 @@ function Card() {
     <div className=" flex items-center justify-center bg-gray-950 ">
 
       {/* <div className="min-h-screen bg-0 flex items-center justify-center p-10"> */}
-      <div className="min-h-screen w-screen grid grid-cols-4 grid-rows-[0.5fr_2fr_1fr_1fr_0.7fr] gap-3 p-6 rounded-2xl shadow-lg">
-        <div className="row-span-3 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col items-center text-center ">
+      <div className="min-h-screen w-screen 
+        grid grid-cols-1 
+        md:grid-cols-2 
+        lg:grid-cols-4 
+        grid-rows-auto
+        gap-4 p-4 sm:p-6 grid-rows-[0.5fr_2fr_1fr_1fr_0.7fr] gap-3 p-6 rounded-2xl shadow-lg">
+        <div className="row-span-3 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col items-center text-center order-1 lg:row-span-3">
           <span className="aspect-square rounded-full overflow-hidden border-4 border-gray-700 shadow-md
           w-24 sm:w-28 md:w-32 lg:w-36 xl:w-40 mb-4">
             <img className="w-full h-full object-cover" src="vite.svg" />
@@ -65,12 +70,13 @@ function Card() {
           <p className="text-gray-300 text-sm">a react and front end developer who likes to build projects that solves real time problems using react and nodejs and also like to explore different database technologies. have worked with different aspects ofreact like Redux, Redux Toolkit, React Hooks, React Router</p>
         </div> */}
 
-        <div className="row-span-3  ">
+        <div className="row-span-3  min-h-auto order-3
+  lg:row-span-3">
           <h2 className="text-white text-2xl font-bold  pt-4">Experiance</h2>
-          <div className="text-left flex flex-col rounded-xl shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 ">
-            {zara.zara.experience.map((exp) => {
+          <div className="text-left flex flex-col rounded-xl shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 w-full p-4 sm:p-6">
+            {zara.zara.experience.map((exp, index) => {
               return (
-                < div className="overflow-hidden sm:h-64 md:h-64 lg:h-86 m-4 pt-0">
+                < div key={index} className="">
                   <h2 className="text-left font-bold">{exp.companyName}</h2>
                   <h2 className="pb-2 text-left">{exp.title} | {exp.years}</h2>
                   {exp.description.map((desc) => (
@@ -84,10 +90,10 @@ function Card() {
 
                       {/* <!-- Content --> */}
 
-                      <div className="ml-4">
-                        {/* <h3 className="text-white font-semibold">{desc}</h3> */}
-                        <p className="text-gray-400 text-sm"></p>
-                        <p>{desc}</p>
+                      <div className="max-h-20 overflow-hidden">
+                        <p className="text-gray-300 text-sm line-clamp-3">
+                          {desc}
+                        </p>
                       </div>
 
                     </div>)
@@ -105,56 +111,80 @@ function Card() {
         <div className="row-span-3 col-span-2 mb-6">
           <h2 className="text-white text-2xl font-semibold mb-2">Card D</h2>
 
-          <div className="mb-10 grid grid-cols-2 grid-rows-2 gap-4 items-stretch sm:h-64 md:h-64 lg:h-130">
-            {zara.zara.projects.slice(0, 3).map((proj, idx) => (
+          <div className="
+            grid 
+             
+            gap-4 
+            sm:grid-cols-2 
+            md:grid-cols-2 
+            lg:grid-cols-2 
+            lg:grid-rows-2 
+            items-stretch
+            w-full
+          ">
+            {zara.zara.projects.slice(0, 3).map((proj) => (
               <div
                 key={proj.projectName}
-                className="flex flex-col  shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 flex flex-col justify-between"
+                className="
+        flex flex-col
+        h-full
+        shadow-lg
+        bg-gradient-to-br from-gray-900 to-gray-800
+        rounded-xl
+        p-6
+      "
               >
+                {/* TEXT CONTENT */}
                 <div>
-                  <p className="text-lg font-semibold text-white">{proj.projectName}</p>
-                  <p className="text-sm text-gray-300 mt-2">{proj.projectDescription}</p>
-                  <p className="text-xs text-gray-400 mt-2">{proj.techStack}</p>
+                  <p className="text-lg font-semibold text-white">
+                    {proj.projectName}
+                  </p>
+                  <p className="text-sm text-gray-300 mt-2">
+                    {proj.projectDescription}
+                  </p>
+                  <p className="text-xs text-gray-400 mt-2">
+                    {proj.techStack}
+                  </p>
                 </div>
 
-                {/* KNOW MORE BUTTON WITH DYNAMIC COLORS */}
-                <div 
-                  className={`mt-6 px-4 py-2  rounded-lg text-white font-medium bg-gradient-to-r from-pink-900/40 to-pink-700/40 hover:bg-pink-900/30    flex items-center justify-between`}
+                {/* BUTTON AT BOTTOM */}
+                <div
+                  className="
+          mt-auto
+          px-4 py-2
+          rounded-lg
+          text-white font-medium
+          bg-gradient-to-r from-pink-900/40 to-pink-700/40
+          hover:bg-pink-900/30
+          flex items-center justify-between
+          transition
+        "
                 >
                   Know More <ArrowUpRight />
                 </div>
               </div>
             ))}
 
-            {/* CTA TILE FOR 4th GRID ITEM */}
-            <div className="rounded-xl p-6 shadow-lg bg-gradient-to-br from-pink-900/40 to-pink-700/40 border border-pink-900/30 flex flex-col items-center justify-center text-white font-semibold">
-              <p className="text-xl">✨ Curious?</p>
-              <p className="text-sm mt-2 text-pink-200">Click to explore all projects!</p>
-
-              <button className="mt-4 px-4 py-2 bg-pink-500/30 border border-pink-500/30 rounded-lg hover:bg-pink-600/40 transition">
-                Show All Projects
-              </button>
-            </div>
+            {/* 4TH SLOT — “See All Projects” */}
+            <button
+              className="
+      flex flex-col items-center justify-center
+      h-full shadow-lg
+      rounded-xl border border-pink-500/40
+      bg-pink-900/10 hover:bg-pink-900/20
+      text-white font-semibold
+      text-center p-6
+      transition
+    "
+            >
+              Show All Projects
+            </button>
           </div>
-        </div>
-        {/* <div className=" row-span-2 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800  ">
-          <h2 className="text-white text-2xl font-semibold mb-2">Card D</h2>
-          <p className="text-gray-300 text-sm">Bottom-middle card.</p>
-        </div> */}
-        {/* <div className="rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800  ">
-          <h2 className="text-white text-2xl font-semibold mb-2">Card C</h2>
-          <p className="text-gray-300 text-sm">Bottom-left card.</p>
-        </div>
 
-        <div className="rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 ">
-          <h2 className="text-white text-2xl font-semibold mb-2">Card D</h2>
-          <p className="text-gray-300 text-sm">Bottom-middle card.</p>
+
         </div>
-        <div className="rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800  ">
-          <h2 className="text-white text-2xl font-semibold mb-2">Card D</h2>
-          <p className="text-gray-300 text-sm">Bottom-middle card.</p>
-        </div> */}
-        <div className="row-span-2 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col items-center text-center ">
+        <div className="row-span-2 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col items-center text-center order-5
+  lg:row-span-2 ">
 
           <h2 className="text-white text-2xl font-bold mb-2">Skills</h2>
 
@@ -184,7 +214,7 @@ function Card() {
 </div> */}
 
       {/* </div> */}
-    </div>
+    </div >
 
   );
 }
