@@ -4,7 +4,23 @@ import { Linkedin, Mail, Github, LinkedinIcon, ArrowUpRight } from "lucide-react
 function Card() {
   // Track theme in state (default: light)
   const [theme, setTheme] = useState("light");
+  const buttonColors = [
+    "border-pink-800/30 from-pink-900/30 to-pink-700/30 hover:bg-pink-900/30",
+    "border-blue-500 from-pink-900 to-pink-700 hover:bg-blue-500",
+    "border-green-500 bg-green-500/20 hover:bg-green-500",
 
+  ];
+  const getColorFromString = (str: any) => {
+    console.log(str)
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      console.log("hash before:", hash)
+      hash = str.charCodeAt(i) + ((hash << 5) - hash);
+      console.log("hash after:", hash)
+
+    }
+    return buttonColors[Math.abs(hash) % buttonColors.length];
+  };
   // On mount, check if user had previously chosen a theme
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -26,10 +42,8 @@ function Card() {
     <div className=" flex items-center justify-center bg-gray-950 ">
 
       {/* <div className="min-h-screen bg-0 flex items-center justify-center p-10"> */}
-      <div className="min-h-screen w-screen grid grid-cols-4 grid-rows-[0.5fr_1fr_2fr_2fr_1fr] gap-3 p-6 rounded-2xl shadow-lg">
-        <div className="col-span-4 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col items-center text-center ">
-        </div>
-        <div className="row-span-2 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col items-center text-center ">
+      <div className="min-h-screen w-screen grid grid-cols-4 grid-rows-[0.5fr_2fr_1fr_1fr_0.7fr] gap-3 p-6 rounded-2xl shadow-lg">
+        <div className="row-span-3 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col items-center text-center ">
           <span className="aspect-square rounded-full overflow-hidden border-4 border-gray-700 shadow-md
           w-24 sm:w-28 md:w-32 lg:w-36 xl:w-40 mb-4">
             <img className="w-full h-full object-cover" src="vite.svg" />
@@ -42,58 +56,91 @@ function Card() {
             <LinkedinIcon className="w-8 h-8 p-1  text-white " /><Mail className="w-8 h-8 p-1  text-white " /><Github className="w-8 h-8 p-1  text-white" />
           </span>
         </div>
-
-
-        <div className="col-span-3 ">
-          <h2 className="text-white text-2xl font-bold mb-2">Experience</h2>
-          <p className="text-gray-300 text-sm">This card spans two rows.</p>
+        <div className="col-span-3 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col items-center text-center ">
         </div>
 
-        <div className="row-span-2   rounded-xl  shadow-lg bg-gradient-to-br from-gray-900 to-gray-800  ">
-          <div className="flex flex-col ">
-            <h2 className="text-white text-2xl font-bold  pt-4">Experiance</h2>
+
+        {/* <div className="col-span-3 ">
+          <h2 className="text-white text-2xl font-bold mb-2">Experience</h2>
+          <p className="text-gray-300 text-sm">a react and front end developer who likes to build projects that solves real time problems using react and nodejs and also like to explore different database technologies. have worked with different aspects ofreact like Redux, Redux Toolkit, React Hooks, React Router</p>
+        </div> */}
+
+        <div className="row-span-3  ">
+          <h2 className="text-white text-2xl font-bold  pt-4">Experiance</h2>
+          <div className="text-left flex flex-col rounded-xl shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 ">
             {zara.zara.experience.map((exp) => {
               return (
-              < div className="overflow-hidden sm:64 md:64 lg:h-86 m-4 pt-0">
-                <h2 className="text-left font-bold">{exp.companyName}</h2>
-                <h2 className="pb-2 text-left">{exp.title} | {exp.years}</h2>
-                {exp.description.map((desc) => (
+                < div className="overflow-hidden sm:h-64 md:h-64 lg:h-86 m-4 pt-0">
+                  <h2 className="text-left font-bold">{exp.companyName}</h2>
+                  <h2 className="pb-2 text-left">{exp.title} | {exp.years}</h2>
+                  {exp.description.map((desc) => (
 
-                  <div className="relative pl-6 ">
-                    {/* <!-- Vertical line --> */}
-                    <div className="absolute left-2 top-0 h-full w-[2px] bg-gray-500"></div>
+                    <div className="relative pl-6 ">
+                      {/* <!-- Vertical line --> */}
+                      <div className="absolute left-2 top-0 h-full w-[2px] bg-gray-500"></div>
 
-                    {/* <!-- Bullet --> */}
-                    <div className="absolute left-1 top-2 w-3 h-3 rounded-full bg-pink-500 border-2 border-white"></div>
+                      {/* <!-- Bullet --> */}
+                      <div className="absolute left-1 top-2 w-3 h-3 rounded-full bg-pink-500 border-2 border-white"></div>
 
-                    {/* <!-- Content --> */}
+                      {/* <!-- Content --> */}
 
-                    <div className="ml-4">
-                      {/* <h3 className="text-white font-semibold">{desc}</h3> */}
-                      <p className="text-gray-400 text-sm"></p>
-                      <p>{desc}</p>
-                    </div>
+                      <div className="ml-4">
+                        {/* <h3 className="text-white font-semibold">{desc}</h3> */}
+                        <p className="text-gray-400 text-sm"></p>
+                        <p>{desc}</p>
+                      </div>
 
-                  </div>)
-                )}</div>
+                    </div>)
+                  )}</div>
               )
             })
             }
 
-            <div className="flex flex-row justify-between w-full px-4 py-2 rounded-lg bg-pink-500 hover:bg-pink-700 text-white font-medium mt-0">
+            <div className="flex flex-row justify-between w-full px-4 py-2 rounded-lg border border-pink-500 bg-pink-500/30 hover:bg-pink-700 text-white font-medium mt-0">
               Know More<ArrowUpRight />
             </div>
           </div>
         </div>
 
-        <div className="row-span-2 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 ">
+        <div className="row-span-3 col-span-2 mb-6">
+          <h2 className="text-white text-2xl font-semibold mb-2">Card D</h2>
+
+          <div className="mb-10 grid grid-cols-2 grid-rows-2 gap-4 items-stretch sm:h-64 md:h-64 lg:h-130">
+            {zara.zara.projects.slice(0, 3).map((proj, idx) => (
+              <div
+                key={proj.projectName}
+                className="flex flex-col  shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 flex flex-col justify-between"
+              >
+                <div>
+                  <p className="text-lg font-semibold text-white">{proj.projectName}</p>
+                  <p className="text-sm text-gray-300 mt-2">{proj.projectDescription}</p>
+                  <p className="text-xs text-gray-400 mt-2">{proj.techStack}</p>
+                </div>
+
+                {/* KNOW MORE BUTTON WITH DYNAMIC COLORS */}
+                <div 
+                  className={`mt-6 px-4 py-2  rounded-lg text-white font-medium bg-gradient-to-r from-pink-900/40 to-pink-700/40 hover:bg-pink-900/30    flex items-center justify-between`}
+                >
+                  Know More <ArrowUpRight />
+                </div>
+              </div>
+            ))}
+
+            {/* CTA TILE FOR 4th GRID ITEM */}
+            <div className="rounded-xl p-6 shadow-lg bg-gradient-to-br from-pink-900/40 to-pink-700/40 border border-pink-900/30 flex flex-col items-center justify-center text-white font-semibold">
+              <p className="text-xl">✨ Curious?</p>
+              <p className="text-sm mt-2 text-pink-200">Click to explore all projects!</p>
+
+              <button className="mt-4 px-4 py-2 bg-pink-500/30 border border-pink-500/30 rounded-lg hover:bg-pink-600/40 transition">
+                Show All Projects
+              </button>
+            </div>
+          </div>
+        </div>
+        {/* <div className=" row-span-2 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800  ">
           <h2 className="text-white text-2xl font-semibold mb-2">Card D</h2>
           <p className="text-gray-300 text-sm">Bottom-middle card.</p>
-        </div>
-        <div className=" row-span-2 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800  ">
-          <h2 className="text-white text-2xl font-semibold mb-2">Card D</h2>
-          <p className="text-gray-300 text-sm">Bottom-middle card.</p>
-        </div>
+        </div> */}
         {/* <div className="rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800  ">
           <h2 className="text-white text-2xl font-semibold mb-2">Card C</h2>
           <p className="text-gray-300 text-sm">Bottom-left card.</p>
@@ -121,10 +168,10 @@ function Card() {
             <img src="https://img.icons8.com/?size=100&id=54087&format=png&color=000000" className="w-8 h-8 p-1 " />
           </span>
         </div>
-        <div className="col-span-3  ">
-          <h2 className="text-white text-2xl font-semibold mb-2">Card C</h2>
-          <p className="text-gray-300 text-sm">Bottom-left card.</p>
+        {/* <div className="col-span-3  "> */}
+        <div className="col-span-3 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col items-center text-center ">
         </div>
+        {/* </div> */}
 
 
 
