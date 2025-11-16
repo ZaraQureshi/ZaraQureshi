@@ -52,11 +52,11 @@ function Card() {
         </div>
 
         {/* Empty Space - Can be Banner or Summary */}
-        <div className="md:col-span-3 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 hidden md:flex">
+        <div className="flex justify-end md:col-span-3 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 hidden md:flex">
 
-          <span>Projects</span>
-          <span>Experience</span>
-          <span>Contact</span>
+          <span className="pl-4 underline decoration-2 decoration-pink-500 underline-offset-6">Projects</span>
+          <span className="pl-4 underline decoration-2 decoration-pink-500 underline-offset-6 ">Experience</span>
+          <span className="pl-4  underline decoration-2 decoration-pink-500 underline-offset-6">Contact</span>
         </div>
 
         {/* Experience */}
@@ -110,10 +110,11 @@ function Card() {
               </div>
             ))}
 
-            <div className="flex items-center justify-center h-full shadow-lg rounded-xl border border-pink-500/40 bg-gradient-to-br from-pink-900/30 to-pink-800/30 hover:bg-pink-900/20 text-white font-semibold text-center p-6 transition">
+            
+          </div>
+          <div className="flex items-center justify-center shadow-lg rounded-xl border border-pink-500/40 bg-gradient-to-br from-pink-900/30 to-pink-800/30 hover:bg-pink-900/20 text-white font-semibold text-center p-6 transition">
               Show All Projects
             </div>
-          </div>
         </div>
 
         {/* Skills */}
