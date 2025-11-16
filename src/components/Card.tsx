@@ -52,7 +52,12 @@ function Card() {
         </div>
 
         {/* Empty Space - Can be Banner or Summary */}
-        <div className="md:col-span-3 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 hidden md:flex"></div>
+        <div className="md:col-span-3 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 hidden md:flex">
+
+          <span>Projects</span>
+          <span>Experience</span>
+          <span>Contact</span>
+        </div>
 
         {/* Experience */}
         <div className="md:row-span-3 w-full text-left">
@@ -86,25 +91,28 @@ function Card() {
         <div className="md:row-span-3 md:col-span-2 text-left">
           <h2 className="text-2xl font-bold mb-2 text-pink-400">Projects</h2>
 
-          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2">
+          <div className="grid auto-rows-[1fr] gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 flex-1">
             {zara.zara.projects.slice(0, 3).map((proj) => (
               <div
                 key={proj.projectName}
-                className="flex flex-col h-full shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6"
+                className="flex flex-col justify-between h-full shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6"
               >
+                <div>
                 <p className="text-lg font-semibold text-white">{proj.projectName}</p>
                 <p className="text-sm text-gray-300 mt-2">{proj.projectDescription}</p>
+                </div><div>
                  <p className="text-xs text-gray-400 my-2">Tech: {proj.techStack.join(", ")}</p>
 
-                <div className="mt-auto px-4 py-2 rounded-lg text-white font-medium bg-pink-800/40 hover:bg-pink-900/30 flex items-center justify-between transition cursor-pointer">
+                <div className="mt-auto px-4 py-2 rounded-lg text-white font-medium border border-pink-500 bg-pink-500/30 hover:bg-pink-900/30 flex items-center justify-between transition cursor-pointer">
                   Know More <ArrowUpRight />
+                </div>
                 </div>
               </div>
             ))}
 
-            <button className="flex items-center justify-center h-full shadow-lg rounded-xl border border-pink-500/40 bg-pink-900/10 hover:bg-pink-900/20 text-white font-semibold text-center p-6 transition">
+            <div className="flex items-center justify-center h-full shadow-lg rounded-xl border border-pink-500/40 bg-gradient-to-br from-pink-900/30 to-pink-800/30 hover:bg-pink-900/20 text-white font-semibold text-center p-6 transition">
               Show All Projects
-            </button>
+            </div>
           </div>
         </div>
 
