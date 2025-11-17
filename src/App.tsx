@@ -1,7 +1,7 @@
 
 import './App.css'
 import Card from './components/Card'
-import Portfolio from './components/Portfolio'
+// import Portfolio from './components/Portfolio'
 
 function App() {
 
