@@ -1,4 +1,3 @@
-import  { useState, useEffect } from "react";
 import zara from "../../public/info.json";
 import {  Mail, Github, LinkedinIcon, ArrowUpRight } from "lucide-react";
 
