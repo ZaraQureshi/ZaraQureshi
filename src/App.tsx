@@ -1,12 +1,14 @@
 
 import './App.css'
+import Card from './components/Card'
 import Portfolio from './components/Portfolio'
 
 function App() {
 
   return (
     <>
-    <Portfolio/>
+    {/* <Portfolio/> */}
+    <Card/>
       {/* <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
