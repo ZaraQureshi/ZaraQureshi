@@ -24,7 +24,7 @@
     "projects": [
       {
         "projectName": "BillGrill",
-        "projectDescription": "BillGrill is a web application that allows users to create, edit, and delete bills. The application also allows users to view their bill history and see a summary of their bills.",
+        "projectDescription": "asdfghjkjhgfdsdfghjukiBillGrill is a web application that allows users to create, edit, and delete bills. The application also allows users to view their bill history and see a summary of their bills.",
         "githubLink": "https://github.com/ZaraQureshi/DynamicInternetBillGenerator",
         "projectLink": "https://billgrill.persist.site/",
         "techStack": [
