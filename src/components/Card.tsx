@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import zara from "../../public/info.json";
-import { Linkedin, Mail, Github, LinkedinIcon, ArrowUpRight } from "lucide-react";
+import {  Mail, Github, LinkedinIcon, ArrowUpRight } from "lucide-react";
 
 function Card() {
   const [theme, setTheme] = useState("light");
@@ -13,12 +13,12 @@ function Card() {
     }
   }, []);
 
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
-    document.documentElement.classList.toggle("dark", newTheme === "dark");
-  };
+  // const toggleTheme = () => {
+  //   const newTheme = theme === "light" ? "dark" : "light";
+  //   setTheme(newTheme);
+  //   localStorage.setItem("theme", newTheme);
+  //   document.documentElement.classList.toggle("dark", newTheme === "dark");
+  // };
 
   return (
     <div className="flex items-center justify-center bg-gray-950 min-h-screen p-4 w-full">
