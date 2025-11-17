@@ -1,0 +1,78 @@
+{
+  "zara": {
+    "name": "Zara Qureshi",
+    "title": "Software Engineer",
+    "skills": [
+      "Javascript",
+      "ReactJs, NodeJs, SQL"
+    ],
+    "experience": [
+      {
+        "companyName": "Xoriant",
+        "description": [
+          "Successfully upgraded an existing .NET Framework web application to .NET 8, improving performance and maintainability.",
+          "Reduced deployment time by 40% and enhanced system efficiency by 30% through modernization efforts.",
+          "Migrated a .NET Framework API application to .NET Core 8, enhancing performance and scalability.",
+          "Improved API response time by 40% through optimized integration with ElasticSearch.",
+          "Designed and implemented a serverless architecture using AWS Lambda, SQS, and S3 to efficiently process and store data, improving scalability and cost-effectiveness.",
+          "Managed and optimized SQL databases using Microsoft SQL Server (SSMS), writing complex queries, stored procedures, and performing performance tuning for efficient data processing."
+        ],
+        "title": "Software Engineer",
+        "years": "2022 - present"
+      }
+    ],
+    "projects": [
+      {
+        "projectName": "BillGrill",
+        "projectDescription": "BillGrill is a web application that allows users to create, edit, and delete bills. The application also allows users to view their bill history and see a summary of their bills.",
+        "githubLink": "https://github.com/ZaraQureshi/DynamicInternetBillGenerator",
+        "projectLink": "https://billgrill.persist.site/",
+        "techStack": [
+          "React",
+          "Node.js",
+          "Express",
+          "MongoDB"
+        ]
+      },
+      {
+        "projectName": "PeakParser",
+        "projectDescription": "BillGrill is a web application that allows users to convert data from one format to another.",
+        "githubLink": "https://github.com/ZaraQureshi/PeakParser",
+        "projectLink": "https://peakparser.persist.site/",
+        "techStack": [
+          "React",
+          "Node.js",
+          "Express",
+          "MongoDB"
+        ]
+      },
+      {
+        "projectName": "PTHealthCare",
+        "projectDescription": "PTHealthCare is a web application that allows users make appointment and view appointments.",
+        "githubLink": "https://github.com/ZaraQureshi/PTHealthCare",
+        "projectLink": "https://pthealthcare.persist.site/",
+        "techStack": [
+          "React",
+          "Node.js",
+          "Express",
+          "MongoDB"
+        ]
+      }
+    ],
+    "about": "Software engineer who builds solutions",
+    "contact": [
+      {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/ZaraQureshi/"
+      },
+      {
+        "name": "GitHub",
+        "link": "https://github.com/ZaraQureshi"
+      },
+      {
+        "name": "email",
+        "link": "mailto:qzara819@gmail.com"
+      }
+    ]
+  }
+}
