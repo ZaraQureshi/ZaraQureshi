@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import zara from "../../public/info.json";
 import {  Mail, Github, LinkedinIcon, ArrowUpRight } from "lucide-react";
 
@@ -53,8 +54,8 @@ function Card() {
         {/* Empty Space - Can be Banner or Summary */}
         <div className="flex justify-end md:col-span-3 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 hidden md:flex">
 
-          <span className="pl-4 underline decoration-2 decoration-pink-500 underline-offset-6">Projects</span>
-          <span className="pl-4 underline decoration-2 decoration-pink-500 underline-offset-6 ">Experience</span>
+          <Link to='/ZaraQureshi/projects' className="pl-4 underline decoration-2 decoration-pink-500 underline-offset-6">Projects</Link>
+           <Link to='/ZaraQureshi/experience'  className="pl-4 underline decoration-2 decoration-pink-500 underline-offset-6 ">Experience</Link>
           <span className="pl-4  underline decoration-2 decoration-pink-500 underline-offset-6">Contact</span>
         </div>
 
