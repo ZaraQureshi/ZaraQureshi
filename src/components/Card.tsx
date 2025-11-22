@@ -45,8 +45,8 @@ function Card() {
           <span className="flex items-center text-center p-2 gap-2">
             <a href="https://www.linkedin.com/in/zara-qureshi-6720aa1b4/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BF8wYkfwZQeyVmvH9N4ro5w%3D%3D" className="p-2 bg-pink-700/30 rounded-full transition"><LinkedinIcon className="w-7 h-7 text-white" /></a>
 
-            <a href="https://github.com/ZaraQureshi/ZaraQureshi/" className="p-2 bg-pink-700/30 rounded-full transition"><Mail className="w-7 h-7 text-white" /></a>
-            <a href="#" className="p-2 bg-pink-700/30 rounded-full transition"><Github className="w-7 h-7 text-white" /></a>
+            <a href="mailto:zaraqureshidev@gmail.com" className="p-2 bg-pink-700/30 rounded-full transition"><Mail className="w-7 h-7 text-white" /></a>
+            <a href="https://github.com/ZaraQureshi/ZaraQureshi/" className="p-2 bg-pink-700/30 rounded-full transition"><Github className="w-7 h-7 text-white" /></a>
           </span>
         </div>
 
