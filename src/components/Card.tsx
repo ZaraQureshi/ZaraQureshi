@@ -80,7 +80,7 @@ function Card() {
               </div>
             ))}
 
-            <div className="flex items-center justify-between w-full px-4 py-2 rounded-lg border border-pink-500 bg-pink-500/30 hover:bg-pink-700 text-white font-medium mt-0 cursor-pointer">
+            <div className="flex items-center justify-between w-full px-4 py-2 rounded-lg border border-pink-500 bg-pink-500/30 hover:bg-pink-900/30 text-white font-medium mt-0 cursor-pointer">
               Know More <ArrowUpRight />
             </div>
           </div>
