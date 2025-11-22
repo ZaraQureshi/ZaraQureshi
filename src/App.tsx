@@ -1,5 +1,5 @@
 
-import { Routes, Route, Router } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import Card from './components/Card'
 import { Projects } from './components/Projects'
