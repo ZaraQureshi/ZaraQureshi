@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+
+  @utility header-btn {
+  @apply pl-4 underline decoration-2 decoration-pink-500 underline-offset-6;
+}
+
+@utility link-btn {
+  @apply text-white font-normal;
+}
+
+a.link-btn {
+  @apply text-white font-normal no-underline;
+}
+@utility badge{
+    @apply px-3 py-1 text-xs font-medium rounded-full
+                                  bg-gradient-to-r from-pink-700/40 to-pink-500/30
+                                  text-pink-200 border border-pink-500/30
+}
+@utility project-btn{
+    @apply w-full px-3 py-1 rounded-lg text-white font-medium border border-pink-500 bg-pink-500/30 hover:bg-pink-900/30 flex items-center justify-between transition cursor-pointer;
+}
+
