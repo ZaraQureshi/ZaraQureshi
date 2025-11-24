@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import zara from "../../public/info.json";
-import {  Mail, Github, LinkedinIcon, ArrowUpRight } from "lucide-react";
+import { Mail, Github, LinkedinIcon, ArrowUpRight, GithubIcon } from "lucide-react";
+import { Header } from "./Header";
 
 function Card() {
   // const [theme, setTheme] = useState("light");
@@ -36,6 +37,8 @@ function Card() {
       >
         {/* Profile */}
         <div className="md:row-span-3 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col items-center text-center">
+          {/* <div className=""> */}
+
           <span className="aspect-square rounded-full overflow-hidden border-4 border-gray-700 shadow-md w-24 sm:w-28 md:w-32 lg:w-36 xl:w-40 mb-4">
             <img className="w-full h-full object-cover" src="vite.svg" />
           </span>
@@ -49,14 +52,22 @@ function Card() {
             <a href="mailto:zaraqureshidev@gmail.com" className="p-2 bg-pink-700/30 rounded-full transition"><Mail className="w-7 h-7 text-white" /></a>
             <a href="https://github.com/ZaraQureshi/ZaraQureshi/" className="p-2 bg-pink-700/30 rounded-full transition"><Github className="w-7 h-7 text-white" /></a>
           </span>
+          <p>
+            I am passionate about building applications that solve real-world problems with clean UI, scalable APIs, and efficient data models.
+
+          </p>
+          <p className="pt-4">
+            What I’m Exploring Now
+            Building scalable backend systems with Hono + Node.js
+
+            Working with LLMs & AI automation
+          </p>
         </div>
 
         {/* Empty Space - Can be Banner or Summary */}
         <div className="flex justify-end md:col-span-3 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 hidden md:flex">
 
-          <Link to='/ZaraQureshi/projects' className="pl-4 underline decoration-2 decoration-pink-500 underline-offset-6">Projects</Link>
-           <Link to='/ZaraQureshi/experience'  className="pl-4 underline decoration-2 decoration-pink-500 underline-offset-6 ">Experience</Link>
-          <span className="pl-4  underline decoration-2 decoration-pink-500 underline-offset-6">Contact</span>
+          <Header />
         </div>
 
         {/* Experience */}
@@ -81,9 +92,9 @@ function Card() {
               </div>
             ))}
 
-            <div className="flex items-center justify-between w-full px-4 py-2 rounded-lg border border-pink-500 bg-pink-500/30 hover:bg-pink-900/30 text-white font-medium mt-0 cursor-pointer">
-              Know More <ArrowUpRight />
-            </div>
+            <Link to="/experience" className="link-btn flex items-center justify-between w-full px-4 py-2 rounded-lg border border-pink-500 bg-pink-500/30 hover:bg-pink-900/30 text-white font-medium mt-0 cursor-pointer">
+              Know More <ArrowUpRight className="link-btn" />
+            </Link>
           </div>
         </div>
 
@@ -98,14 +109,21 @@ function Card() {
                 className="flex flex-col justify-between h-full shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6"
               >
                 <div>
-                  <p className="text-lg font-semibold text-white">{proj.projectName}</p>
+                  <div className="flex items-center"><span className="text-lg font-semibold text-white">{proj.projectName}</span></div>
                   <p className="text-sm text-gray-300 mt-2">{proj.projectDescription}</p>
-                </div><div>
+                </div>
+                <div>
                   <p className="text-xs text-gray-400 my-2">Tech: {proj.techStack.join(", ")}</p>
-
-                  <div className="mt-auto px-4 py-2 rounded-lg text-white font-medium border border-pink-500 bg-pink-500/30 hover:bg-pink-900/30 flex items-center justify-between transition cursor-pointer">
-                    Know More <ArrowUpRight />
+                  <div className="flex justify-between gap-3 mt-4 ">
+                    <span className="project-btn ">
+                      <a className="link-btn flex justify-between w-full" href={`${proj.githubLink}`}>Github <GithubIcon className="" /></a>
+                    </span>
+                    <span className="project-btn">
+                      <a className="link-btn flex justify-between w-full" href={`${proj.projectLink}`}>Website <ArrowUpRight /></a>
+                    </span>
                   </div>
+
+
                 </div>
               </div>
             ))}
@@ -113,7 +131,7 @@ function Card() {
 
           </div>
           <div className="flex items-center justify-center shadow-lg rounded-xl border border-pink-500/40 bg-gradient-to-br from-pink-900/30 to-pink-800/30 hover:bg-pink-900/20 text-white font-semibold text-center px-auto py-5 mt-4 transition">
-            Show All Projects
+            <Link className="link-btn" to="/projects">Show All Projects</Link>
           </div>
         </div>
 
