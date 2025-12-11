@@ -9,6 +9,7 @@
     "experience": [
       {
         "companyName": "Xoriant",
+        
         "description": [
           "Successfully upgraded an existing .NET Framework web application to .NET 8, improving performance and maintainability.",
           "Reduced deployment time by 40% and enhanced system efficiency by 30% through modernization efforts.",
@@ -17,9 +18,17 @@
           "Designed and implemented a serverless architecture using AWS Lambda, SQS, and S3 to efficiently process and store data, improving scalability and cost-effectiveness.",
           "Managed and optimized SQL databases using Microsoft SQL Server (SSMS), writing complex queries, stored procedures, and performing performance tuning for efficient data processing."
         ],
+        "tech": [
+          "React",
+          ".NET",
+          "AWS",
+          "SQL"
+        ],
         "title": "Software Engineer",
         "years": "2022 - present"
+      
       }
+      
     ],
     "projects": [
       {
