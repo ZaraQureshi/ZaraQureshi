@@ -40,7 +40,7 @@ function Card() {
           {/* <div className=""> */}
 
           <span className="aspect-square rounded-full overflow-hidden border-4 border-gray-700 shadow-md w-24 sm:w-28 md:w-32 lg:w-36 xl:w-40 mb-4">
-            <img className="w-full h-full object-cover" src="vite.svg" />
+            <img className="w-full h-full object-cover" src="image.png" />
           </span>
 
           <h3 className="text-white text-xl font-semibold mb-2">{zara.zara.name}</h3>

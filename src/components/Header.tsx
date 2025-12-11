@@ -13,7 +13,7 @@ export const Header = () => {
 
                 <span className="header-btn"><Link className="link-btn" to='/projects' >Projects</Link></span>
                 <span className="header-btn"> <Link to='/experience' className="link-btn" >Experience</Link></span>
-                <span className="header-btn">Contact</span>
+                <span className="header-btn text-white">Contact</span>
             </div>
         </div>
     )
