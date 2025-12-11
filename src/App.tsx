@@ -1,11 +1,10 @@
 
-import { Routes, Route, BrowserRouter } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import './global.css'
 import Card from './components/Card'
 import { Projects } from './components/Projects'
 import { Experience } from './components/Experience'
-import { Header } from './components/Header'
 // import Portfolio from './components/Portfolio'
 
 function App() {
