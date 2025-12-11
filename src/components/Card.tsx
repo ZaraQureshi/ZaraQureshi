@@ -52,11 +52,11 @@ function Card() {
             <a href="mailto:zaraqureshidev@gmail.com" className="p-2 bg-pink-700/30 rounded-full transition"><Mail className="w-7 h-7 text-white" /></a>
             <a href="https://github.com/ZaraQureshi/ZaraQureshi/" className="p-2 bg-pink-700/30 rounded-full transition"><Github className="w-7 h-7 text-white" /></a>
           </span>
-          <p>
+          <p className="text-gray-300">
             I am passionate about building applications that solve real-world problems with clean UI, scalable APIs, and efficient data models.
 
           </p>
-          <p className="pt-4">
+          <p className="pt-4 text-gray-300">
             What I’m Exploring Now
             Building scalable backend systems with Hono + Node.js
 
@@ -77,8 +77,8 @@ function Card() {
           <div className="text-left flex flex-col rounded-xl shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 w-full p-4 sm:p-6">
             {zara.zara.experience.map((exp, index) => (
               <div key={index} className="mb-4">
-                <h2 className="text-left font-bold">{exp.companyName}</h2>
-                <h2 className="pb-2 text-left">
+                <h2 className="text-left font-bold text-white">{exp.companyName}</h2>
+                <h2 className="pb-2 text-left text-white">
                   {exp.title} | {exp.years}
                 </h2>
 
