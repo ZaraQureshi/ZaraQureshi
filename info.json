@@ -44,10 +44,10 @@
         ]
       },
       {
-        "projectName": "PeakParser",
-        "projectDescription": "BillGrill is a web application that allows users to convert data from one format to another.",
-        "githubLink": "https://github.com/ZaraQureshi/PeakParser",
-        "projectLink": "https://peakparser.persist.site/",
+        "projectName": "AuthticationSystem",
+        "projectDescription": "Auth-Service is a hono-based authentication service that provides user registration, login, and JWT token generation functionalities for different databases.",
+        "githubLink": "https://github.com/ZaraQureshi/AuthticationSystem",
+        "projectLink": "https://github.com/ZaraQureshi/AuthticationSystem",
         "techStack": [
           "React",
           "Node.js",
@@ -59,7 +59,7 @@
         "projectName": "PTHealthCare",
         "projectDescription": "PTHealthCare is a web application that allows users make appointment and view appointments.",
         "githubLink": "https://github.com/ZaraQureshi/PTHealthCare",
-        "projectLink": "https://pthealthcare.persist.site/",
+        "projectLink": "https://tubaphysio.in/",
         "techStack": [
           "React",
           "Node.js",
