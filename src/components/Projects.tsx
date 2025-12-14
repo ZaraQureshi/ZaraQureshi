@@ -10,11 +10,11 @@ export const Projects = () => {
             bg-gradient-to-br from-gray-900 to-gray-800 
             p-4 sm:p-4 
             ">
-                <div className="m-8">
+                <div className="m-3 lg:m-8">
 
                 <Header />
                 </div>
-                <div className="flex items-center justify-center m-10">
+                <div className="flex items-center justify-center lg:m-10">
                     <div className="w-full max-w-4xl ">
                         <h2 className="text-4xl font-bold mb-6 text-pink-400 text-center">
                             Projects
