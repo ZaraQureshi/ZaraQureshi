@@ -31,18 +31,7 @@
       
     ],
     "projects": [
-      {
-        "projectName": "BillGrill",
-        "projectDescription": "BillGrill is a web application that allows users to create, edit, and delete bills. The application also allows users to view their bill history and see a summary of their bills.",
-        "githubLink": "https://github.com/ZaraQureshi/DynamicInternetBillGenerator",
-        "projectLink": "https://zaraqureshi.github.io/DynamicInternetBillGenerator/",
-        "techStack": [
-          "React",
-          "Node.js",
-          "Express",
-          "MongoDB"
-        ]
-      },
+      
       {
         "projectName": "AuthticationSystem",
         "projectDescription": "Auth-Service is a hono-based authentication service that provides user registration, login, and JWT token generation functionalities for different databases.",
@@ -63,8 +52,15 @@
         "techStack": [
           "React",
           "Node.js",
-          "Express",
-          "MongoDB"
+          "Express"
+        ]
+      },{
+        "projectName": "Jira Automation System",
+        "projectDescription": "An AI-driven automation engine designed to streamline Jira ticket management. This tool leverages transformer-based models to automatically classify ticket priority, identify historical context via semantic similarity, and assess developer availability through sentiment analysis.",
+        "githubLink": "https://github.com/ZaraQureshi/JiraAutomation",
+        "projectLink": "https://huggingface.co/spaces/ZaraQureshi/JiraAutomation",
+        "techStack": [
+          "FastAPI", "DistilBERT","SentenceTransformer","ChromaDB","HuggingFace"
         ]
       }
     ],
@@ -80,7 +76,7 @@
       },
       {
         "name": "email",
-        "link": "mailto:qzara819@gmail.com"
+        "link": "mailto:zaraqureshidev@gmail.com"
       }
     ]
   }
