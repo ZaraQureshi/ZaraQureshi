@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import zara from "../../public/info.json";
 import { Mail, Github, LinkedinIcon, ArrowUpRight, GithubIcon } from "lucide-react";
 import { Header } from "./Header";
