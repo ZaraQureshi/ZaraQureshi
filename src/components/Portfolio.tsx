@@ -4,7 +4,7 @@ import zara from '../../public/info.json';
 import './Portfolio.css';
 
 const Portfolio = () => {
-    const { about, projects, name, title, contact, skills, experience } = zara.zara;
+    const { about, projects, name, title, contact,  experience } = zara.zara;
 
     // 1. State to manage the mode
     const [isDarkMode, setIsDarkMode] = useState(() => {
