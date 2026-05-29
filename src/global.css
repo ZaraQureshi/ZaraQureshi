@@ -1,5 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap");
 @import "tailwindcss";
-
 
   @utility header-btn {
   @apply pl-4 underline decoration-2 decoration-pink-500 underline-offset-6;
@@ -21,3 +21,6 @@ a.link-btn {
     @apply w-full px-3 py-1 rounded-lg text-white font-medium border border-pink-500 bg-pink-500/30 hover:bg-pink-900/30 flex items-center justify-between transition cursor-pointer;
 }
 
+.font-cursive {
+  font-family: "Playfair Display",cursive;
+}

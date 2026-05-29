@@ -4,161 +4,157 @@ import { Mail, Github, LinkedinIcon, ArrowUpRight, GithubIcon } from "lucide-rea
 import { Header } from "./Header";
 
 function Card() {
-  // const [theme, setTheme] = useState("light");
-
-  // useEffect(() => {
-  //   const savedTheme = localStorage.getItem("theme");
-  //   if (savedTheme) {
-  //     // setTheme(savedTheme);
-  //     document.documentElement.classList.toggle("dark", savedTheme === "dark");
-  //   }
-  // }, []);
-
-  // const toggleTheme = () => {
-  //   const newTheme = theme === "light" ? "dark" : "light";
-  //   setTheme(newTheme);
-  //   localStorage.setItem("theme", newTheme);
-  //   document.documentElement.classList.toggle("dark", newTheme === "dark");
-  // };
-
   return (
-    <div className="flex items-center justify-center bg-gray-950 min-h-screen overflow-hidden p-4 w-full">
-      <div
-        className="
-          w-full
-          
-          grid
-          gap-4
-          grid-cols-1
-          md:grid-cols-4
-          grid-rows-auto
-          md:grid-rows-[auto_1fr_auto]
-        "
-      >
-        {/* Profile */}
-        <div className="md:row-span-3 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col items-center text-center md:sticky md:top-4 md:h-auto md:self-start">
-          {/* <div className=""> */}
+    <>
+      {/* Injecting a style tag to completely hide scrollbars globally for scroll containers */}
+      <style dangerouslySetInnerHTML={{__html: `
+        .no-scrollbar::-webkit-scrollbar {
+          display: none; /* Safari and Chrome */
+        }
+        .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+        }
+      `}} />
 
-          <span className="aspect-square rounded-full overflow-hidden border-4 border-gray-700 shadow-md w-24 sm:w-28 md:w-32 lg:w-36 xl:w-40 mb-4">
-            <img className="w-full h-full object-cover" src="image.png" />
-          </span>
+      {/* Parent wrapper locks viewport down to exactly 100vh with no external scrollbars */}
+      <div className="flex items-center justify-center bg-gray-950 h-screen w-full p-4 overflow-hidden">
+        <div
+          className="
+            w-full
+            h-full
+            grid
+            gap-4
+            grid-cols-1
+            md:grid-cols-4
+            md:grid-rows-[auto_1fr_auto]
+          "
+        >
+          {/* Left Column Container: Houses Profile (top) and Skills (bottom) */}
+          <div className="md:col-span-1 md:row-span-3 flex flex-col gap-4 h-full min-h-0">
+            
+            {/* Profile Card (Fixed Height / Static sizing) */}
+            <div className="rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col items-center text-center shrink-0">
+              <span className="aspect-square rounded-full overflow-hidden border-4 border-gray-700 shadow-md w-24 sm:w-28 md:w-32 mb-4">
+                <img className="w-full h-full object-cover" src="image.png" alt="Profile" />
+              </span>
 
-          <h3 className="text-white text-xl font-semibold mb-2 font-cursive">{zara.zara.name}</h3>
-          <p className="text-gray-300 text-sm">{zara.zara.about}</p>
+              <h3 className="text-white text-xl font-semibold mb-2 font-cursive">{zara.zara.name}</h3>
+              <p className="text-gray-300 text-sm mb-4">{zara.zara.about}</p>
 
-          <span className="flex items-center text-center p-2 gap-2">
-            <a href="https://www.linkedin.com/in/zara-qureshi-6720aa1b4/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BF8wYkfwZQeyVmvH9N4ro5w%3D%3D" className="p-2 bg-pink-700/30 rounded-full transition"><LinkedinIcon className="w-7 h-7 text-white" /></a>
-
-            <a href="mailto:zaraqureshidev@gmail.com" className="p-2 bg-pink-700/30 rounded-full transition"><Mail className="w-7 h-7 text-white" /></a>
-            <a href="https://github.com/ZaraQureshi/ZaraQureshi/" className="p-2 bg-pink-700/30 rounded-full transition"><Github className="w-7 h-7 text-white" /></a>
-          </span>
-          <p className="text-gray-300">
-            I am passionate about building applications that solve real-world problems with clean UI, scalable APIs, and efficient data models.
-
-          </p>
-          {/* <p className="pt-4 text-gray-300">
-            What I’m Exploring Now
-            Building scalable backend systems with Hono + Node.js
-
-            Working with LLMs & AI automation
-          </p> */}
-        </div>
-
-        {/* Empty Space - Can be Banner or Summary */}
-        <div className="flex justify-end md:col-span-3 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 hidden md:flex md:sticky md:top-4 md:self-start z-10">
-
-          <Header />
-        </div>
-        <div className="md:col-span-3 md:row-span-1 md:overflow-y-auto md:h-[calc(100vh-8.5rem)] pr-1">
-          {/* Experience */}
-          <div className="md:col-span-3 w-full text-left md:top-4">
-            <h2 className="text-2xl font-bold mb-2 text-pink-400 font-cursive">Experience</h2>
-
-            <div className="text-left flex flex-col rounded-xl shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 w-full p-4 sm:p-6">
-              {zara.zara.experience.map((exp, index) => (
-                <div key={index} className="mb-4">
-                  <h2 className="text-left font-bold text-white">{exp.companyName}</h2>
-                  <h2 className="pb-2 text-left text-white">
-                    {exp.title} | {exp.years}
-                  </h2>
-
-                  {exp.description.map((desc, i) => (
-                    <div key={i} className="relative pl-6 pb-3">
-                      <div className="absolute left-2 top-0 h-full w-[2px] bg-gray-500"></div>
-                      <div className="absolute left-1 top-2 w-3 h-3 rounded-full bg-pink-500 border-2 border-white"></div>
-                      <p className="text-gray-300 text-sm line-clamp-3">{desc}</p>
-                    </div>
-                  ))}
-                </div>
-              ))}
-
-              {/* <Link to="/experience" className="link-btn flex items-center justify-between w-full px-4 py-2 rounded-lg border border-pink-500 bg-pink-500/30 hover:bg-pink-900/30 text-white font-medium mt-0 cursor-pointer">
-              Know More <ArrowUpRight className="link-btn" />
-            </Link> */}
-            </div>
-          </div>
-
-          {/* Projects */}
-          <div className="md:col-span-3 text-left flex flex-col justify-evenly ">
-            <h2 className="text-2xl font-bold mb-2 text-pink-400 font-cursive">Projects</h2>
-
-            <div className="grid auto-rows-[1fr] gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-3 flex-1">
-              {zara.zara.projects.map((proj) => (
-                <div
-                  key={proj.projectName}
-                  className="flex flex-col justify-between h-full shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6"
+              <span className="flex items-center text-center p-2 gap-2 mb-4">
+                <a
+                  href="https://www.linkedin.com/in/zara-qureshi-6720aa1b4/"
+                  className="p-2 bg-pink-700/30 rounded-full transition hover:bg-pink-700/50"
                 >
-                  <div>
-                    <div className="flex items-center"><span className="text-lg font-semibold text-white">{proj.projectName}</span></div>
-                    <p className="text-sm text-gray-300 mt-2">{proj.projectDescription}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-400 my-2">Tech: {proj.techStack.join(", ")}</p>
-                    <div className="flex justify-between gap-1 mt-4 w-auto">
-                      <span className="badge w-full">
-                        <a className="link-btn flex justify-between items-center w-full" text-md href={`${proj.githubLink}`}><span>Github</span> <GithubIcon className="" /></a>
-                      </span>
-                      <span className="badge w-full">
-                        <a className="link-btn flex justify-between items-center w-full" href={`${proj.projectLink}`}>Website <ArrowUpRight /></a>
-                      </span>
-                    </div>
+                  <LinkedinIcon className="w-6 h-6 text-white" />
+                </a>
+                <a href="mailto:zaraqureshidev@gmail.com" className="p-2 bg-pink-700/30 rounded-full transition hover:bg-pink-700/50">
+                  <Mail className="w-6 h-6 text-white" />
+                </a>
+                <a href="https://github.com/ZaraQureshi/ZaraQureshi/" className="p-2 bg-pink-700/30 rounded-full transition hover:bg-pink-700/50">
+                  <Github className="w-6 h-6 text-white" />
+                </a>
+              </span>
 
-
-                  </div>
-                </div>
-              ))}
-
-
+              <p className="text-gray-300 text-sm leading-relaxed">
+                I am passionate about building applications that solve real-world problems with clean UI, scalable APIs, and efficient data models.
+              </p>
             </div>
-            {/* <div className="flex items-center justify-center shadow-lg rounded-xl border border-pink-500/40 bg-gradient-to-br from-pink-900/30 to-pink-800/30 hover:bg-pink-900/20 text-white font-semibold text-center px-auto py-5 mt-4 transition">
-            <Link className="link-btn" to="/projects">Show All Projects</Link>
-          </div> */}
+
+            {/* Skills Card (Added no-scrollbar so it scrolls invisibly if skills overflow) */}
+            <div className="rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col items-center text-center flex-1 min-h-0 overflow-y-auto no-scrollbar">
+              <h2 className="text-white text-2xl font-bold mb-3 font-cursive">Skills</h2>
+              <span className="flex flex-wrap justify-center gap-2 p-1">
+                {zara.zara.skills.map((skill) => (
+                  <div key={skill.name} className="badge flex justify-center items-center gap-2 bg-gray-800 text-white p-2 rounded-lg text-sm border border-gray-700">
+                    <img
+                      src={skill.icon}
+                      className="w-5 h-5"
+                      alt={skill.name}
+                      title={skill.name}
+                    />
+                    <span>{skill.name}</span>
+                  </div>
+                ))}
+              </span>
+            </div>
+          </div>
+
+          {/* Right Columns Header Element */}
+          <div className="md:col-span-3 text-right rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 hidden md:flex shrink-0">
+            <Header />
+          </div>
+
+          {/* Right Columns Center Content: Scrollable layout box with scrollbar hidden via 'no-scrollbar' */}
+          <div className="md:col-span-3 h-full min-h-0 overflow-y-auto no-scrollbar flex flex-col gap-6">
+            
+            {/* Experience Feed Section */}
+            <div className="w-full text-left">
+              <h2 className="text-2xl font-bold mb-2 text-pink-400 font-cursive">Experience</h2>
+              <div className="text-left flex flex-col rounded-xl shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 w-full p-4 sm:p-6 gap-4">
+                {zara.zara.experience.map((exp, index) => (
+                  <div key={index} className="border-b border-gray-800 last:border-0 pb-4 last:pb-0">
+                    <h3 className="text-left font-bold text-white font-cursive text-lg">{exp.companyName}</h3>
+                    <h4 className="pb-2 text-left text-pink-300/80 text-sm">
+                      {exp.title} | {exp.years}
+                    </h4> 
+
+                    {exp.description.map((desc, i) => (
+                      <div key={i} className="relative pl-6 pb-2 last:pb-0">
+                        <div className="absolute left-2 top-0 h-full w-[2px] bg-gray-800"></div>
+                        <div className="absolute left-[5px] top-2 w-2 h-2 rounded-full bg-pink-500"></div>
+                        <p className="text-gray-300 text-sm leading-relaxed">{desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Projects Component Feed Grid Section */}
+            <div className="w-full text-left">
+              <h2 className="text-2xl font-bold mb-2 text-pink-400 font-cursive">Projects</h2>
+              <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                {zara.zara.projects.map((proj) => (
+                  <div
+                    key={proj.projectName}
+                    className="flex flex-col justify-between h-full shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-5 border border-gray-800/50"
+                  >
+                    <div>
+                      <div className="flex items-center">
+                        <span className="text-lg font-semibold text-white font-cursive">{proj.projectName}</span>
+                      </div>
+                      <p className="text-sm text-gray-300 mt-2 leading-relaxed">{proj.projectDescription}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-gray-400 my-3 font-mono">Tech: {proj.techStack.join(", ")}</p>
+                      <div className="flex justify-between gap-2 mt-2 w-full">
+                        <span className="badge w-full bg-gray-800 hover:bg-gray-700 transition rounded-lg p-2 text-center border border-gray-700">
+                          <a className="link-btn flex justify-center items-center gap-2 text-xs text-white w-full" href={`${proj.githubLink}`}>
+                            <span>Github</span> <GithubIcon className="w-4 h-4" />
+                          </a>
+                        </span>
+                        <span className="badge w-full bg-pink-900/30 hover:bg-pink-900/50 transition rounded-lg p-2 text-center border border-pink-800/30">
+                          <a className="link-btn flex justify-center items-center gap-2 text-xs text-pink-300 w-full" href={`${proj.projectLink}`}>
+                            <span>Website</span> <ArrowUpRight className="w-4 h-4" />
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Right Columns Footer Element */}
+          <div className="md:col-span-3 rounded-xl p-4 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 text-gray-400 text-xs flex items-center shrink-0">
+            ⚡ Please stay tuned. This dashboard portfolio is actively under development.
           </div>
         </div>
-        {/* Skills */}
-        <div className="md:row-span-2 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col items-center text-center md:sticky md:bottom-4 md:self-end z-10">
-          <h2 className="text-white text-2xl font-bold mb-2 font-cursive">Skills</h2>
-
-          <span className="flex flex-wrap justify-center gap-3 p-2">
-            {zara.zara.skills.map((skill, i) => (
-              <div className="badge flex justify-center items-center">
-                <img
-                  key={skill.name}
-                  src={skill.icon}
-                  className="w-6"
-                  alt={skill.name}
-                  title={skill.name}
-                /> <span>{skill.name}</span>
-              </div>
-            ))}
-
-          </span>
-        </div>
-
-        {/* Bottom Space */}
-        <div className="md:col-span-3 rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800  flex md:sticky md:bottom-0 md:self-end z-10">Please stay tuned. This work is under construction.</div>
       </div>
-    </div>
+    </>
   );
 }
 
