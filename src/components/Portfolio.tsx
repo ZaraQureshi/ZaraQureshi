@@ -98,7 +98,7 @@ const Portfolio = () => {
                     </div>
                 </section>
  {/* Skills Section (Now a Card) */}
-                <section className="section-card"> {/* 👈 New Card Class */}
+                {/* <section className="section-card"> 
                     <h3 className="section-title">Skills & Technologies</h3>
                     <div className="skills-list">
                         {skills.map((skill, index) => (
@@ -107,7 +107,7 @@ const Portfolio = () => {
                             </span>
                         ))}
                     </div>
-                </section>
+                </section> */}
                 {/* Social Links / Connect (Now a Card) */}
                 <section className="section-card"> {/* 👈 New Card Class */}
                     <h3 className="section-title">Connect</h3>
