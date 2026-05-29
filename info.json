@@ -3,8 +3,66 @@
     "name": "Zara Qureshi",
     "title": "Software Engineer",
     "skills": [
-      "Javascript",
-      "ReactJs, NodeJs, SQL"
+      {
+        "name": "React",
+        "icon": "https://img.icons8.com/officel/80/react.png"
+      },
+      {
+        "name": "MongoDB",
+        "icon": "https://img.icons8.com/?size=100&id=74402&format=png"
+      },
+      {
+        "name": "SQL",
+        "icon": "https://img.icons8.com/?size=100&id=13406&format=png"
+      },
+      {
+        "name": "Javascript",
+        "icon": "https://img.icons8.com/?size=100&id=k0mhEXozIpG1&format=png"
+      },
+      {
+        "name": "AWS",
+        "icon": "https://img.icons8.com/?size=100&id=33039&format=png"
+      },
+      {
+        "name": ".NET",
+        "icon": "https://img.icons8.com/?size=100&id=74402&format=png"
+      },
+      {
+        "name": "NodeJS",
+        "icon": "https://img.icons8.com/?size=100&id=54087&format=png"
+      },
+      {
+        "name": "HuggingFace",
+        "icon": "https://img.icons8.com/?size=100&id=sop9ROXku5bb&format=png&color=000000"
+      },
+      {
+        "name": "FastAPI",
+        "icon": "https://avatars.githubusercontent.com/u/156354296?s=200&v=4"
+      },
+      {
+        "name": "Docker",
+        "icon": "https://img.icons8.com/?size=100&id=cdYUlRaag9G9&format=png&color=000000"
+      },
+      {
+        "name": "Python",
+        "icon": "https://img.icons8.com/?size=100&id=l75OEUJkPAk4&format=png&color=000000"
+      },
+     {
+        "name": "Typescript",
+        "icon": "https://img.icons8.com/?size=100&id=wpZmKzk11AzJ&format=png&color=000000"
+      },
+      {
+        "name": "Supabase",
+        "icon": "https://img.icons8.com/?size=100&id=sH0rW2TvYdr9&format=png&color=000000"
+      },
+      {
+        "name": "Github",
+        "icon": "https://img.icons8.com/?size=100&id=AZOZNnY73haj&format=png&color=000000"
+      },
+      {
+        "name": "TailwindCSS",
+        "icon": "https://img.icons8.com/?size=100&id=x7XMNGh2vdqA&format=png&color=000000"
+      }
     ],
     "experience": [
       {
@@ -61,6 +119,14 @@
         "projectLink": "https://huggingface.co/spaces/ZaraQureshi/JiraAutomation",
         "techStack": [
           "FastAPI", "DistilBERT","SentenceTransformer","ChromaDB","HuggingFace"
+        ]
+      },
+      {
+        "projectName": "Github Code Summarizer",
+        "projectDescription": "AI-driven code analysis service that clones a repo, scans its structure, extracts key files, and generates a high-level understanding summary via an LLM.",
+        "githubLink": "https://github.com/ZaraQureshi/AICodeAgent",
+        "techStack": [
+          "FastAPI", "OpenAPI","Pydantic"
         ]
       }
     ],
