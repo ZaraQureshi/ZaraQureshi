@@ -1,6 +1,7 @@
 import zara from "../../public/info.json";
 import { Mail, Github, LinkedinIcon, ArrowUpRight, GithubIcon } from "lucide-react";
 import { Header } from "./Header";
+import { PortfolioChatbot } from "./PortfolioChatbot";
 
 function Card() {
   return (
@@ -17,7 +18,7 @@ function Card() {
       `}} />
 
       {/* Parent wrapper locks viewport down to exactly 100vh with no external scrollbars */}
-      <div className="flex items-center justify-center bg-gray-950 h-screen w-full p-4 overflow-hidden">
+      <div className="flex items-center justify-center bg-gray-950 md:h-screen w-full p-4 md:overflow-hidden">
         <div
           className="
             w-full
@@ -153,6 +154,7 @@ function Card() {
           </div>
         </div>
       </div>
+      <PortfolioChatbot />
     </>
   );
 }
