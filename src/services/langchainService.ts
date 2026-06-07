@@ -7,7 +7,7 @@ import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
 // Note: Ensure your process.env.REACT_APP_OPENAI_API_KEY or VITE_OPENAI_API_KEY is configured
 const model = new ChatGoogleGenerativeAI({
   // Point LangChain directly to your Cloudflare Worker routing address
-  baseUrl: "http://127.0.0.1:8787",
+  baseUrl: import.meta.env.VITE_WORKER_URL,
   apiKey: "PROXYMANAGEDKEY",
   
   model: "gemini-2.5-flash", // Gemini 1.5 Flash is incredibly fast and highly accurate for RAG
