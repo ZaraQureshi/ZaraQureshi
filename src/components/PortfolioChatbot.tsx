@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { MessageSquare, X, Send } from "lucide-react";
 import { askPortfolioBot } from "../services/langchainService"; // Import LangChain utility
 export function PortfolioChatbot() {
@@ -13,7 +13,7 @@ export function PortfolioChatbot() {
     },
   ]);
   const [isTyping, setIsTyping] = useState(false);
-  const chatEndRef = useRef(null);
+  const chatEndRef = useRef<HTMLDivElement | null>(null);
 
   const suggestions = [
     "What is your tech stack?",

@@ -1,13 +1,10 @@
-import { ChatOpenAI } from "@langchain/openai";
 import { PromptTemplate } from "@langchain/core/prompts";
 import { StringOutputParser } from "@langchain/core/output_parsers";
 import zaraData from "../../public/info.json"; // Adjust path if needed
 import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
-import { MY_SECRET_GEMINI_KEY } from "./apiConfig";
 
 // 1. Initialize the LLM
 // Note: Ensure your process.env.REACT_APP_OPENAI_API_KEY or VITE_OPENAI_API_KEY is configured
-console.log(MY_SECRET_GEMINI_KEY)
 const model = new ChatGoogleGenerativeAI({
   // Point LangChain directly to your Cloudflare Worker routing address
   baseUrl: "http://127.0.0.1:8787",
@@ -40,7 +37,7 @@ const promptTemplate = PromptTemplate.fromTemplate(`
 `);
 
 // 4. Build the LangChain Expression Language (LCEL) Pipeline
-export async function askPortfolioBot(userQuestion) {
+export async function askPortfolioBot(userQuestion:string) {
   try {
     const chain = promptTemplate.pipe(model).pipe(new StringOutputParser());
     
