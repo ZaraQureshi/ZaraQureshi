@@ -26,8 +26,9 @@ jobs:
 
       # Step 4: Build the React app
       - name: Build the app
+        env:
+          VITE_WORKER_URL: ${{ variables.VITE_WORKER_URL }}
         run: npm run build
-
       # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
