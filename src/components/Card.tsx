@@ -82,9 +82,9 @@ function Card() {
           </div>
 
           {/* Right Columns Header Element */}
-          <div className="md:col-span-3 text-right rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 hidden md:flex shrink-0">
+          {/* <div className="md:col-span-3 w-full text-right rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800  md:flex shrink-0">
             <Header />
-          </div>
+          </div> */}
 
           {/* Right Columns Center Content: Scrollable layout box with scrollbar hidden via 'no-scrollbar' */}
           <div className="md:col-span-3 h-full min-h-0 overflow-y-auto no-scrollbar flex flex-col gap-6">
@@ -149,9 +149,9 @@ function Card() {
           </div>
 
           {/* Right Columns Footer Element */}
-          <div className="md:col-span-3 rounded-xl p-4 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 text-gray-400 text-xs flex items-center shrink-0">
+          {/* <div className="md:col-span-3 rounded-xl p-4 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 text-gray-400 text-xs flex items-center shrink-0">
             ⚡ Please stay tuned. This dashboard portfolio is actively under development.
-          </div>
+          </div> */}
         </div>
       </div>
       <PortfolioChatbot />

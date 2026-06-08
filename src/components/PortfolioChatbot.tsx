@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { MessageSquare, X, Send } from "lucide-react";
 import { askPortfolioBot } from "../services/langchainService"; // Import LangChain utility
+
 export function PortfolioChatbot() {
 
 
@@ -78,12 +79,12 @@ export function PortfolioChatbot() {
             {messages.map((msg, i) => (
               <div
                 key={i}
-                className={`max-w-[85%] rounded-xl px-3.5 py-2 text-sm leading-relaxed whitespace-pre-line ${msg.sender === "user"
+                className={`max-w-[85%] rounded-xl px-3.5 py-2 text-left text-wrap break-words text-sm leading-relaxed whitespace-pre-line ${msg.sender === "user"
                     ? "bg-pink-600 text-white self-end rounded-br-none"
                     : "bg-gray-800 text-gray-200 self-start rounded-bl-none border border-gray-700"
-                  }`}
+                  }`} dangerouslySetInnerHTML={{ __html: msg.text }}
               >
-                {msg.text}
+                
               </div>
             ))}
             {isTyping && (
