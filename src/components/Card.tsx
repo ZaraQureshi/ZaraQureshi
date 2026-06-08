@@ -1,6 +1,5 @@
 import zara from "../../public/info.json";
 import { Mail, Github, LinkedinIcon, ArrowUpRight, GithubIcon } from "lucide-react";
-import { Header } from "./Header";
 import { PortfolioChatbot } from "./PortfolioChatbot";
 
 function Card() {
