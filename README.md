@@ -1,9 +1,9 @@
 # 🚀 Zara Qureshi
 
-Frontend-focused developer crafting smooth, efficient user experiences.  
+Full stack developer crafting smooth, efficient user experiences.  
 Exploring backend systems, AI/LLMs, and building things that solve real problems.
 
-## ⚡ Tech Stack
+## Tech Stack
 <p align="left">
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
@@ -20,7 +20,7 @@ Exploring backend systems, AI/LLMs, and building things that solve real problems
 
 
 
-## 🌐 Connect with Me
+## Connect with Me
 <p align="left">
   <a href="https://www.linkedin.com/in/zara-qureshi-295ba0286/">
     <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" />
@@ -30,7 +30,7 @@ Exploring backend systems, AI/LLMs, and building things that solve real problems
   </a>
 </p>
 
-## 🧩 Projects
+## Projects
 
 ### Personal Portfolio & AI Assistant
 A responsive portfolio website with an on-site AI assistant that answers contextual questions about my background, experience, and projects.
@@ -52,7 +52,7 @@ A secure authentication service for user registration, login, and JWT-based acce
 
 **Skills:** Hono, Node.js, Express, MongoDB, authentication, JWT, backend APIs
 
-## ❤️ What I’m Exploring Now
+## What I’m Exploring Now
 - Building scalable frontend experiences
 - AI/LLM workflows and contextual assistants
 - Cloudflare Workers and edge-based APIs
