@@ -13,13 +13,12 @@ Exploring backend systems, AI/LLMs, and building things that solve real problems
   <img src="https://img.shields.io/badge/Cloudflare_Workers-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" />
   <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" />
   <img src="https://img.shields.io/badge/Google_Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
+  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
 </p>
 
-## 📊 GitHub Stats
-<div align="center">
-  <img height="180" src="https://github-readme-stats.vercel.app/api?username=ZaraQureshi&show_icons=true&theme=radical" />
-  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ZaraQureshi&layout=compact&theme=radical" />
-</div>
+
 
 ## 🌐 Connect with Me
 <p align="left">
@@ -34,14 +33,24 @@ Exploring backend systems, AI/LLMs, and building things that solve real problems
 ## 🧩 Projects
 
 ### Personal Portfolio & AI Assistant
-A responsive portfolio website with an on-site AI assistant that answers contextual questions about my background, experience, and projects. Built with React, TypeScript, and Tailwind CSS, with Gemini access routed through a Cloudflare Worker for secure API handling.
+A responsive portfolio website with an on-site AI assistant that answers contextual questions about my background, experience, and projects.
+
+**Skills:** React, TypeScript, Vite, Tailwind CSS, LangChain, Cloudflare Workers, Google Gemini, OpenRouter
 
 ### Jira Automation
-Automation work focused on reducing repetitive Jira tasks, improving workflow efficiency, and streamlining team operations.
+An AI-driven automation system designed to streamline Jira ticket management through ticket classification, semantic similarity, and availability analysis.
 
+**Skills:** FastAPI, Python, HuggingFace, DistilBERT, SentenceTransformer, AI automation
 
-### Engineering Tooling & Integrations
-Internal tools and integrations designed to improve developer productivity, reliability, and maintainability.
+### GitHub Code Summarizer
+An AI-powered code analysis service that clones repositories, scans project structure, extracts important files, and generates a concise architectural summary.
+
+**Skills:** FastAPI, Python, OpenAPI, Pydantic, LLM integration, code analysis
+
+### Authentication System
+A secure authentication service for user registration, login, and JWT-based access flow.
+
+**Skills:** Hono, Node.js, Express, MongoDB, authentication, JWT, backend APIs
 
 ## ❤️ What I’m Exploring Now
 - Building scalable frontend experiences
