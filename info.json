@@ -129,7 +129,7 @@
         "projectName": "AuthenticationSystem",
         "projectDescription": "Auth-Service is a hono-based authentication service that provides user registration, login, and JWT token generation functionalities for different databases.",
         "githubLink": "https://github.com/ZaraQureshi/AuthenticationSystem",
-        "projectLink": "https://github.com/ZaraQureshi/AuthenticationSystem",
+        
         "techStack": [
           "React",
           "Node.js",
