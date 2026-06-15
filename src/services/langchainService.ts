@@ -1,7 +1,7 @@
 export const askPortfolioBot = async (userMessage: string, onChunk: (text: string) => void) => {
   try {
 console.log()
-    const response = await fetch(`${import.meta.env.VITE_WORKER_URL_PROD}/api/chat`, {
+    const response = await fetch(`${import.meta.env.VITE_WORKER_URL}/api/chat`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ question: userMessage }),
