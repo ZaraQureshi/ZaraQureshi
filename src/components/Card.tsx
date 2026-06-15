@@ -26,7 +26,7 @@ function Card() {
             gap-4
             grid-cols-1
             md:grid-cols-4
-            md:grid-rows-[auto_1fr_auto]
+            md:grid-rows-[auto_1fr]
           "
         >
           {/* Left Column Container: Houses Profile (top) and Skills (bottom) */}
@@ -113,7 +113,7 @@ function Card() {
 
             {/* Projects Component Feed Grid Section */}
             <div className="w-full text-left">
-              <h2 className="text-2xl font-bold mb-2 text-pink-400 font-cursive">Projects</h2>
+              <h2 className="text-2xl font-bold text-pink-400 font-cursive">Projects</h2>
               <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {zara.zara.projects.map((proj) => (
                   <div
