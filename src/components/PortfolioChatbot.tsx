@@ -7,11 +7,11 @@ export function PortfolioChatbot() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState("");
-  const [messages, setMessages] = useState([
+  const [messages, setMessages] = useState<{ role: 'user' | 'assistant'; text: string }[]>([
     {
-      sender: "bot",
-      text: "Hi there! I'm Zara's LangChain assistant. Ask me anything about her development stack, history at Xoriant, or recent AI projects!",
-    },
+      "role": "assistant",
+      "text": "Hi there! I'm Zara's LangChain assistant. Ask me anything about her development stack, history at Xoriant, or recent AI projects!",
+    }
   ]);
   const [isTyping, setIsTyping] = useState(false);
   const chatEndRef = useRef<HTMLDivElement | null>(null);
@@ -30,20 +30,31 @@ export function PortfolioChatbot() {
     if (!textToSend.trim()) return;
 
     // Append user message immediately
-    setMessages((prev) => [...prev, { sender: "user", text: textToSend }]);
+    setMessages((prev) => [...prev, { role: "user", text: textToSend },{ role: "assistant", text: "" }]);
     setInput("");
     setIsTyping(true);
-
-    try {
+      try {
 
       // Invoke the LangChain RAG pipeline
-      const aiReply = await askPortfolioBot(textToSend);
+      await askPortfolioBot(textToSend, (chunk) => {
+        // Turn off the pulsing bubble icon as tokens arrive
+        setIsTyping(false); 
 
-      setMessages((prev) => [...prev, { sender: "bot", text: aiReply }]);
+        setMessages((prev) => {
+          const updated = [...prev];
+          const lastIndex = updated.length - 1;
+          
+          updated[lastIndex] = {
+            ...updated[lastIndex],
+            text: updated[lastIndex].text + chunk,
+          };
+          return updated; // MUST return the array state!
+        });
+      });
     } catch (error) {
       setMessages((prev) => [
         ...prev,
-        { sender: "bot", text: "I'm experiencing a bit of heavy traffic right now! Please try asking again in a few seconds." }
+        { role: "assistant", text: "I'm experiencing a bit of heavy traffic right now! Please try asking again in a few seconds." }
       ]);
     } finally {
       setIsTyping(false); // Re-enable the interface
@@ -76,17 +87,21 @@ export function PortfolioChatbot() {
 
           {/* Messages Feed Container */}
           <div className="flex-1 p-4 overflow-y-auto space-y-3 flex flex-col bg-gray-950/40 no-scrollbar">
-            {messages.map((msg, i) => (
+            {messages.map((msg, i) => {              
+              if (msg.role === "assistant" && !msg.text) return null;
+
+              return (
               <div
                 key={i}
-                className={`max-w-[85%] rounded-xl px-3.5 py-2 text-left text-wrap break-words text-sm leading-relaxed whitespace-pre-line ${msg.sender === "user"
+                className={`max-w-[85%] rounded-xl px-3.5 py-2 text-left text-wrap break-words text-sm leading-relaxed whitespace-pre-line ${msg.role === "user"
                     ? "bg-pink-600 text-white self-end rounded-br-none"
                     : "bg-gray-800 text-gray-200 self-start rounded-bl-none border border-gray-700"
                   }`} dangerouslySetInnerHTML={{ __html: msg.text }}
               >
                 
               </div>
-            ))}
+              )
+            })}
             {isTyping && (
               <div className="bg-gray-800 text-gray-400 max-w-[40%] rounded-xl px-3.5 py-2 text-sm self-start rounded-bl-none flex gap-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-gray-500 animate-bounce" />
