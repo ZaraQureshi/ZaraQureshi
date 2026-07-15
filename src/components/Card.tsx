@@ -6,7 +6,8 @@ function Card() {
   return (
     <>
       {/* Injecting a style tag to completely hide scrollbars globally for scroll containers */}
-      <style dangerouslySetInnerHTML={{__html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         .no-scrollbar::-webkit-scrollbar {
           display: none; /* Safari and Chrome */
         }
@@ -31,7 +32,7 @@ function Card() {
         >
           {/* Left Column Container: Houses Profile (top) and Skills (bottom) */}
           <div className="md:col-span-1 md:row-span-3 flex flex-col gap-4 h-full min-h-0">
-            
+
             {/* Profile Card (Fixed Height / Static sizing) */}
             <div className="rounded-xl p-6 shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col items-center text-center shrink-0">
               <span className="aspect-square rounded-full overflow-hidden border-4 border-gray-700 shadow-md w-24 sm:w-28 md:w-32 mb-4">
@@ -87,7 +88,7 @@ function Card() {
 
           {/* Right Columns Center Content: Scrollable layout box with scrollbar hidden via 'no-scrollbar' */}
           <div className="md:col-span-3 h-full min-h-0 overflow-y-auto no-scrollbar flex flex-col gap-6">
-            
+
             {/* Experience Feed Section */}
             <div className="w-full text-left">
               <h2 className="text-2xl font-bold mb-2 text-pink-400 font-cursive">Experience</h2>
@@ -97,7 +98,7 @@ function Card() {
                     <h3 className="text-left font-bold text-white font-cursive text-lg">{exp.companyName}</h3>
                     <h4 className="pb-2 text-left text-pink-300/80 text-sm">
                       {exp.title} | {exp.years}
-                    </h4> 
+                    </h4>
 
                     {exp.description.map((desc, i) => (
                       <div key={i} className="relative pl-6 pb-2 last:pb-0">
@@ -129,16 +130,16 @@ function Card() {
                     <div>
                       <p className="text-xs text-gray-400 my-3 font-mono">Tech: {proj.techStack.join(", ")}</p>
                       <div className="flex justify-between gap-2 mt-2 w-full">
-                        <span className="badge w-full bg-gray-800 hover:bg-gray-700 transition rounded-lg p-2 text-center border border-gray-700">
+                        {proj.githubLink && <span className="badge w-full bg-gray-800 hover:bg-gray-700 transition rounded-lg p-2 text-center border border-gray-700">
                           <a className="link-btn flex justify-center items-center gap-2 text-xs text-white w-full" href={`${proj.githubLink}`}>
                             <span>Github</span> <GithubIcon className="w-4 h-4" />
                           </a>
-                        </span>
-                        <span className="badge w-full bg-pink-900/30 hover:bg-pink-900/50 transition rounded-lg p-2 text-center border border-pink-800/30">
+                        </span>}
+                        {proj.projectLink && <span className="badge w-full bg-pink-900/30 hover:bg-pink-900/50 transition rounded-lg p-2 text-center border border-pink-800/30">
                           <a className="link-btn flex justify-center items-center gap-2 text-xs text-pink-300 w-full" href={`${proj.projectLink}`}>
                             <span>Website</span> <ArrowUpRight className="w-4 h-4" />
                           </a>
-                        </span>
+                        </span>}
                       </div>
                     </div>
                   </div>

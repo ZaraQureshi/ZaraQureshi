@@ -1,10 +1,10 @@
 // src/components/Portfolio.js
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import zara from '../../public/info.json';
 import './Portfolio.css';
 
 const Portfolio = () => {
-    const { about, projects, name, title, contact,  experience } = zara.zara;
+    const { about, projects, name, title, contact, experience } = zara.zara;
 
     // 1. State to manage the mode
     const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -47,7 +47,7 @@ const Portfolio = () => {
             <button onClick={toggleMode} className="mode-toggle-button">
                 {isDarkMode ? '☀️ Switch to Light' : '🌙 Switch to Dark'}
             </button>
-
+here
             <div className="portfolio-container">
 
                 {/* Header / Introduction */}
@@ -56,19 +56,20 @@ const Portfolio = () => {
                     <h2 className="header-title">{title}</h2>
                     <p className="header-about">{about}</p>
                 </header>
-{/* Projects Section (Now a Card) */}
+                {/* Projects Section (Now a Card) */}
                 <section className="section-card"> {/* 👈 New Card Class */}
                     <h3 className="section-title">Selected Projects</h3>
-                    <div className="projects-grid">
-                        {projects.map((project, index) => (
+                    <div className="projects-grid">here
+                        {projects.map((project, index) =>(
                             <div key={index} className="project-card">
                                 <h4 className="project-name">{project.projectName}</h4>
                                 <p className="project-tech">{Array.isArray(project.techStack) ? project.techStack.join(' • ') : project.techStack}</p>
                                 <p className="project-description">{project.projectDescription}</p>
                                 <div className="project-links">
-                                    <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-link">
+                                    {project.githubLink}
+                                    {project.githubLink!=undefined && (<a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-link">
                                         View Code
-                                    </a>
+                                    </a>)}
                                     {project.projectLink && (
                                         <a href={project.projectLink} target="_blank" rel="noopener noreferrer" className="project-link">
                                             Live Demo
@@ -79,7 +80,7 @@ const Portfolio = () => {
                         ))}
                     </div>
                 </section>
-                 {/* Experience Section (Now a Card) */}
+                {/* Experience Section (Now a Card) */}
                 <section className="section-card"> {/* 👈 New Card Class */}
                     <h3 className="section-title">Experience</h3>
                     <div className="experience-list">
@@ -97,7 +98,7 @@ const Portfolio = () => {
                         ))}
                     </div>
                 </section>
- {/* Skills Section (Now a Card) */}
+                {/* Skills Section (Now a Card) */}
                 {/* <section className="section-card"> 
                     <h3 className="section-title">Skills & Technologies</h3>
                     <div className="skills-list">
@@ -118,10 +119,10 @@ const Portfolio = () => {
                     </div>
                 </section>
 
-               
 
-               
-                
+
+
+
 
                 {/* Footer */}
                 <footer className="footer">

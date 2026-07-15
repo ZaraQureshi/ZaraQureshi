@@ -138,8 +138,7 @@
       },
       {
         "projectName": "Selective Evidence Retrieval for Medical Claim Verification",
-        "projectDescription": "A risk-aware AI system that fact-checks medical LLM outputs by extracting claims, scoring their risk, and retrieving PubMed evidence only when needed. The project combines a RoBERTa-based verifier trained on HealthVer with an agentic retrieval pipeline to improve factual accuracy while reducing unnecessary computation.",
-        "githubLink": "https://github.com/ZaraQureshi/AuthenticationSystem",
+        "projectDescription": "An agentic AI system that verifies medical LLM outputs by decomposing responses into claims, assessing risk, and selectively retrieving PubMed evidence. The agent autonomously decides which claims require verification and revises or abstains when evidence is insufficient.",
         "techStack": [
           "Python",
           "PyTorch",
@@ -148,7 +147,7 @@
           "Streamlit",
           "PubMed API",
           "Docker",
-          "Google Cloud (Cloud Storage + Cloud Run)"
+          "Google Cloud (Cloud Storage + Cloud Run)", "LangChain"
         ]
       }
     ],
