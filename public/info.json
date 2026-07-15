@@ -86,8 +86,6 @@
       }
     ],
     "projects": [
-      
-      
       {
         "projectName": "Jira Automation System",
         "projectDescription": "An AI-driven automation engine designed to streamline Jira ticket management. This tool leverages transformer-based models to automatically classify ticket priority, identify historical context via semantic similarity, and assess developer availability through sentiment analysis.",
@@ -121,20 +119,36 @@
           "Vite",
           "LangChain",
           "Cloudflare Workers",
-          "Google Gemini","OpenRouter"
+          "Google Gemini",
+          "OpenRouter"
         ],
         "githubLink": "https://github.com/ZaraQureshi/ZaraQureshi",
         "projectLink": "https://zaraqureshi.dev"
-      },{
+      },
+      {
         "projectName": "AuthenticationSystem",
         "projectDescription": "Auth-Service is a hono-based authentication service that provides user registration, login, and JWT token generation functionalities for different databases.",
         "githubLink": "https://github.com/ZaraQureshi/AuthenticationSystem",
-        
         "techStack": [
           "React",
           "Node.js",
           "Express",
           "MongoDB"
+        ]
+      },
+      {
+        "projectName": "Selective Evidence Retrieval for Medical Claim Verification",
+        "projectDescription": "A risk-aware AI system that fact-checks medical LLM outputs by extracting claims, scoring their risk, and retrieving PubMed evidence only when needed. The project combines a RoBERTa-based verifier trained on HealthVer with an agentic retrieval pipeline to improve factual accuracy while reducing unnecessary computation.",
+        "githubLink": "https://github.com/ZaraQureshi/AuthenticationSystem",
+        "techStack": [
+          "Python",
+          "PyTorch",
+          "Hugging Face Transformers",
+          "FastAPI",
+          "Streamlit",
+          "PubMed API",
+          "Docker",
+          "Google Cloud (Cloud Storage + Cloud Run)"
         ]
       }
     ],
